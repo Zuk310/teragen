@@ -4,7 +4,7 @@ import { ReviewBubbleContainer,
     ReviewBubbleDescription,
     ReviewBubbleDeleteIcon } from './review-bubble.styles';
 
-const ReviewBubble = () => {
+const ReviewBubble = ({review}) => {
 
   return (
     <>
@@ -14,8 +14,8 @@ const ReviewBubble = () => {
       <path d="M12.6213 7.8787L8.37867 12.1213" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M8.37867 7.87862L12.6213 12.1213" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </ReviewBubbleDeleteIcon>
-        <ReviewBubbleTitle>title</ReviewBubbleTitle>
-        <ReviewBubbleDescription>title</ReviewBubbleDescription>
+        <ReviewBubbleTitle>{review.title}</ReviewBubbleTitle>
+        <ReviewBubbleDescription>{review.desc}</ReviewBubbleDescription>
     </ReviewBubbleContainer>
     </>
   )
