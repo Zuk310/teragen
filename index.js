@@ -13,7 +13,6 @@ mongoose
 app.use(express.json());
 app.use(cors());
 
-//test
 app.get('/test', (req, res) => {
   res.send('app is running');
 });
