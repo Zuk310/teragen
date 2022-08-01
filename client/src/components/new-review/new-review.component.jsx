@@ -28,9 +28,9 @@ const NewReview = () => {
     if(inputs.title !== " " && inputs.desc !== " "){
       await postReview(inputs);
       getReviews();
+
     }
   }
-
 
   const pressableBool = inputs.title.length > 0 && inputs.desc.length;
 
