@@ -1,10 +1,10 @@
 import './App.css';
-import ReviewBubble from './components/review-bubble/review-bubble.component';
+import UserCard from './components/user-card/user-card.component';
 
 function App() {
   return (
     <div className='App'>
-      <ReviewBubble />
+      <UserCard />
     </div>
   );
 }
