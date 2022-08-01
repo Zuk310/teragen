@@ -7,7 +7,7 @@ opacity: 0%;
 width: 20px;
 height: 20px;
 top:-8px;
-right:-10px;
+right:-8px;
 cursor: pointer;
 
 `
