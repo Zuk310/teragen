@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+const reviewsRoute = require('./routes/review.route');
+
 const PORT = process.env.PORT || 8000;
 mongoose
   .connect(process.env.MONGO_URI)
@@ -12,6 +14,8 @@ mongoose
 
 app.use(express.json());
 app.use(cors());
+
+app.use('/reviews', reviewsRoute);
 
 app.get('/test', (req, res) => {
   res.send('app is running');
