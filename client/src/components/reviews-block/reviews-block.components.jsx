@@ -7,15 +7,19 @@ import {
   NoReviewsContainer,
   NoReviewsContent,
 } from './reviews-block.styles';
+import { useContext } from 'react';
+import { ReviewsContext } from '../../context/reviews.context';
 
 const ReviewsBlock = () => {
+  const {reviewsList} = useContext(ReviewsContext);
+
   return (
     <ReviewsContainer>
-      {list.length > 0 ? (
-        list
+      {reviewsList.length > 0 ? (
+        reviewsList
           .slice(0)
           .reverse()
-          .map((el) => <ReviewBubble review={el} key={el.key} />)
+          .map((el) => <ReviewBubble review={el} key={el._id} />)
       ) : (
         <>
           <NoReviewsContainer>
