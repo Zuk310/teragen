@@ -1,5 +1,5 @@
 import NewReview from '../new-review/new-review.component';
-import ReviewBubble from '../review-bubble/review-bubble.component';
+import ReviewsBlock from '../reviews-block/reviews-block.components';
 import { UserCardContainer, UserReviewsContainer,UserReviews, UserDetailsContainer} from './user-card.styles';
 
 
@@ -12,12 +12,7 @@ const UserCard = () => {
       <UserReviewsContainer>  
         <UserReviews>
           <NewReview/>
-          {/* test */}
-          <ReviewBubble/>
-          <ReviewBubble/>
-          <ReviewBubble/>
-          <ReviewBubble/>
-          {/* test */}
+          <ReviewsBlock/>
         </UserReviews>
       </UserReviewsContainer>
 

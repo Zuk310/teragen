@@ -3,10 +3,10 @@ import styled from'styled-components';
 const ReviewBubbleDeleteIcon = styled.svg`
 position: absolute;
 color:white;
-transform: scale(0.6);
+/* transform: scale(0.6); */
 opacity: 0%;
-width: 20px;
-height: 20px;
+width: 24px;
+height: 24px;
 background: #dc2d2d;
 border-radius: 50%;
 top:-8px;
