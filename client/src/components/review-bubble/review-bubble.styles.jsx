@@ -1,8 +1,6 @@
 import styled from'styled-components';
 
-import CloseIcon from '@mui/icons-material/Close';
-
-const ReviewBubbleDeleteIcon = styled(CloseIcon)`
+const ReviewBubbleDeleteIcon = styled.svg`
 position: absolute;
 color:white;
 transform: scale(0.6);
