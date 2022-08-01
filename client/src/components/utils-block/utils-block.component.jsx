@@ -86,12 +86,12 @@ const UtilsBlock = () => {
         </Icons>
       </UtilsBubble>
 
-      <UtilsBubble type={"clear"}>
+      <UtilsBubble type={"clear"}  onClick={deleteAll}>
         <Icons width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.8284 9.17158L9.17158 14.8284" stroke="#DC2D2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M9.17157 9.17156L14.8284 14.8284" stroke="#DC2D2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </Icons>
-        <UtilsText onClick={deleteAll}>Clear all reviews</UtilsText>
+        <UtilsText>Clear all reviews</UtilsText>
       </UtilsBubble>
 
       <BreakLine/>

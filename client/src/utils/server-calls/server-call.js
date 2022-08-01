@@ -14,7 +14,6 @@ const getAllReviews = async () => {
 
 //POST
 const postReview = async (review) => {
-  console.log(`${API_URL}/reviews`);
   try {
     await axios.post(`${API_URL}/reviews`, review);
   } catch (error) {
