@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 //GET ALL
 const getAllReviews = async () => {
@@ -14,6 +14,7 @@ const getAllReviews = async () => {
 
 //POST
 const postReview = async (review) => {
+  console.log(`${API_URL}/reviews`);
   try {
     await axios.post(`${API_URL}/reviews`, review);
   } catch (error) {
