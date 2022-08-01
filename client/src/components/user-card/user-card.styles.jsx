@@ -21,7 +21,7 @@ flex-direction: column;
 align-items: flex-start;
 padding: 20px 20px 0px;
 
-width: 430px;
+width: 470px;
 height: 549px;
 /* Gradients/Grays */
 
@@ -44,7 +44,7 @@ padding: 15px 15px 0px;
 gap: 5px;
 
 width: 430px;
-height: 380px;
+height: 467px;
 
 
 /* Inside auto layout */
