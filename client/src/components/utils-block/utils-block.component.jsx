@@ -1,3 +1,7 @@
+import { useContext } from 'react';
+import { ReviewsContext } from '../../context/reviews.context';
+import { deleteAllReviews } from '../../utils/server-calls/server-call';
+
 import {
   CounterContainer,
   Info,
@@ -15,10 +19,19 @@ import {
 
 const UtilsBlock = () => {
 
+  const {reviewsList,getReviews} = useContext(ReviewsContext);
+
+  const deleteAll = async () =>{
+    await deleteAllReviews();
+    getReviews();
+  }
+
+
+
   return (
     <UtilsContainer>
       <CounterContainer>
-        <ReviewCount counter={true}>{0}</ReviewCount>
+        <ReviewCount counter={true}>{reviewsList.length}</ReviewCount>
         <ReviewCount>app reviews</ReviewCount>
       </CounterContainer>
       <Info>
@@ -78,11 +91,11 @@ const UtilsBlock = () => {
           <path d="M14.8284 9.17158L9.17158 14.8284" stroke="#DC2D2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M9.17157 9.17156L14.8284 14.8284" stroke="#DC2D2D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </Icons>
-        <UtilsText >Clear all reviews</UtilsText>
+        <UtilsText onClick={deleteAll}>Clear all reviews</UtilsText>
       </UtilsBubble>
 
       <BreakLine/>
-      <SaveBubble pressable={0}>
+      <SaveBubble pressable={reviewsList.length}>
         <UtilsText>save</UtilsText>
       </SaveBubble>
     </UtilsContainer>

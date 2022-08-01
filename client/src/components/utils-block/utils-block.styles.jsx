@@ -80,6 +80,8 @@ const SaveBubble = styled.div`
           background-color: ${props => props.pressable > 0 ? `#ec1d66` : `#DDE7F0`};
         }
 
+        transition: all ease-in-out 0.2s;
+
 `
 
 const UtilsContentContainer =styled.div`
